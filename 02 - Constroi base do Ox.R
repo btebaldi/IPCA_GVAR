@@ -176,6 +176,7 @@ table.Data <- as_tibble(Matrix.Data) %>% mutate(Date = IPCA_db$Date) %>% select(
 tbl.dic.expandido
 
 writexl::write_xlsx(table.Data, path = "./database/IPCA-baseOx_v5.xlsx")
+writexl::write_xlsx(tbl.dic.expandido, path = "./database/tbl_dic_expandido-baseOx_v5.xlsx")
 
 
 

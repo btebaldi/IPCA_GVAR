@@ -1,8 +1,9 @@
 # GVAR Files
-/Ox/Mmat_files/A_Matrix/
-/Ox/Mmat_files/Cointegration/
-/Ox/Mmat_files/G_Matrix/
-/Ox/Mmat_files/Raw_Matrix/
+/Ox/mat_files/A_Matrix/
+/Ox/mat_files/Cointegration/
+/Ox/mat_files/G_Matrix/
+/Ox/mat_files/RawMatrix/
+/Ox/mat_files/W_mat/
 
 # History files
 .Rhistory
