@@ -81,7 +81,7 @@ for(i in seq_along(tbl.dic$Cod_Item)){
 
 
 # grava dicionario para utilizacao futura.
-# tbl.dic
+writexl::write_xlsx(x = tbl.dic, path = "./database/dicionario_v2.xlsx")
 
 # cleanup
 rm(list = dplyr::setdiff(ls(), c("tbl.dic", "IPCA_db")))
@@ -107,7 +107,7 @@ summary(IPCA_db)
 # linhas_dic <- c(5,6)
 constroi_serie <- function(linhas_dic, dicionario, tbl_IPCA){
   # determina qual a(s) coluna(s) com os dados
-  nomes_col <- dicionario$Weight_col[linhas_dic]
+  nomes_col <- dicionario$Item_col[linhas_dic]
   
   # determina qual o(s) pesos(s) com os dados
   w <- dicionario$weight[linhas_dic]
@@ -150,7 +150,7 @@ Matrix.Data <- matrix(data = NA, nrow = nrow(IPCA_db), ncol = length(unique(tbl.
 colnames(Matrix.Data) <- sprintf("R_%d_IPCA", 1:ncol(Matrix.Data) )
 
 tbl.dic.expandido <- tbl.dic
-i <- 5
+i <- 1
 for (i in unique(tbl.dic$Id_OX)) {
   linhas_dic <- which(tbl.dic$Id_OX == i)
   
